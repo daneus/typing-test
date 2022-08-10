@@ -1,0 +1,9 @@
+@use '../abstracts/colors' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color;
+  max-width: min(70rem, 90%);
+  margin: auto;
+}

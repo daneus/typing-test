@@ -1,0 +1,37 @@
+@use '../abstracts/colors' as *;
+
+.results {
+  margin: 2rem auto;
+  width: 16rem;
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.wpm-result {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: white;
+  & > small {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+}
+.results-list {
+  width: 100%;
+  color: white;
+  margin: 1.25rem 0;
+  padding: 0;
+  & > li {
+    margin: 0.25rem 0;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+  }
+  & > li:nth-child(2n + 1) {
+    background-color: $lighter-bg-color;
+  }
+}

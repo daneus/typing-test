@@ -1,0 +1,27 @@
+@use '../abstracts/colors' as *;
+
+.container {
+  background-color: $lighter-bg-color;
+  width: min(50rem, 100%);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: auto;
+  padding: 1.5rem 2.25rem;
+  line-height: 2.4rem;
+  position: relative;
+}
+.text-hightlight {
+  z-index: 0;
+  position: absolute;
+  height: 2.25rem;
+  width: 14.5px;
+  background-color: $highlighted;
+  border-radius: 2px;
+  transition: all 0.1s ease;
+}
+.test-word {
+  position: relative;
+  z-index: 1;
+}

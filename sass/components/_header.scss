@@ -1,0 +1,21 @@
+@use '../abstracts/colors' as *;
+.header {
+  text-align: center;
+}
+.first-word,
+.second-word {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 8vmin, 8rem);
+}
+.first-word {
+  color: $light-blue;
+}
+.second-word {
+  color: white;
+}
+.subtitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+}

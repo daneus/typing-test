@@ -1,0 +1,15 @@
+html {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow-y: overlay;
+}
+::-webkit-scrollbar {
+  width: 19px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+::-webkit-scrollbar-thumb {
+  background: #616161;
+  border-radius: 25px;
+  border: 6px solid #111;
+}

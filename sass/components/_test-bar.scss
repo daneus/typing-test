@@ -1,0 +1,81 @@
+@use '../abstracts/colors' as *;
+
+.test-bar {
+  width: min(50rem, 100%);
+  margin: 0.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.test-input {
+  flex-grow: 1;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1.25rem;
+  outline: 0;
+  font-size: 1.25rem;
+  border: 2px solid $selected-bg;
+  background-color: $lighter-bg-color;
+  border-radius: 4px;
+  color: white;
+  cursor: text;
+  transition: all 0.2s ease;
+  &:focus {
+    border-color: $light-blue;
+  }
+  &:disabled {
+    color: $disabled-input;
+    cursor: not-allowed;
+    border-color: $disabled-input;
+  }
+}
+.bar-items {
+  display: flex;
+}
+.wpm-shower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.25rem;
+  padding: 0;
+  margin: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 4px;
+  background-color: $lighter-bg-color;
+}
+.reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  padding: 0.9rem 2rem;
+  color: white;
+  background-color: $lighter-bg-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover,
+  &:focus {
+    background-color: $light-blue;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.spin {
+  animation: spin 0.5s ease-in-out;
+}
+.incorrect,
+.incorrect > .correct {
+  color: $incorrect;
+}
+.correct {
+  color: $correct;
+}
