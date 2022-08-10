@@ -29,7 +29,7 @@ const App: React.FC<Props> = ({ words }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const BASE_URL =
     'https://raw.githubusercontent.com/daneus/infinite-scrolling/main/public/words.json';
 
