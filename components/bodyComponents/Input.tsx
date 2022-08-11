@@ -105,6 +105,21 @@ const Input: React.FC = () => {
           setValue(newString);
         }}
         onKeyDown={e => {
+          if (currentIndex === 32) {
+            if (value + e.key === arrayContext[32]) {
+              const lastSpanLenght = spansArray.current[32]?.childNodes.length;
+              const lastLetter = spansArray.current[32]?.childNodes[
+                lastSpanLenght - 2
+              ] as HTMLElement;
+              lastLetter.classList.add('correct');
+              setDisabled(prevState => !prevState);
+              wpmContext.setWPMData(prevState => ({
+                ...prevState,
+                active: false,
+                isTestOver: true
+              }));
+            }
+          }
           if (isAlphabetical(e.key)) {
             keystrokesRef.current++;
             wpmContext.setWPMData(prevState => ({
