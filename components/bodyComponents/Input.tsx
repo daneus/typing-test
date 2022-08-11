@@ -90,7 +90,9 @@ const Input: React.FC = () => {
 
   return (
     <>
+      <label htmlFor="test-input"></label>
       <input
+        id="test-input"
         disabled={disabled}
         ref={inputRef}
         value={value}
