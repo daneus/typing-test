@@ -79,3 +79,7 @@
 .correct {
   color: $correct;
 }
+
+#test-input.incorrect-input {
+  border-color: $incorrect-border;
+}

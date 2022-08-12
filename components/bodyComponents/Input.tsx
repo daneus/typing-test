@@ -88,6 +88,18 @@ const Input: React.FC = () => {
     });
   }, [value, currentIndex, arrayContext]);
 
+  useEffect(() => {
+    if (value === '') {
+      inputRef.current.classList.remove('incorrect-input');
+    }
+    if (value !== '') {
+      inputRef.current.classList.toggle(
+        'incorrect-input',
+        value !== arrayContext[currentIndex].slice(0, value.length)
+      );
+    }
+  }, [value]);
+
   return (
     <>
       <label htmlFor="test-input"></label>
