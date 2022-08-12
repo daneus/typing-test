@@ -98,11 +98,11 @@ const Input: React.FC = () => {
         value !== arrayContext[currentIndex].slice(0, value.length)
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   return (
     <>
-      <label htmlFor="test-input"></label>
       <input
         id="test-input"
         disabled={disabled}
