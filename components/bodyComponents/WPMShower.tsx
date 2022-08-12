@@ -21,6 +21,7 @@ const WPMShower: React.FC = () => {
         timeOfTest: seconds
       }));
     }
+    return () => clearInterval(secondsTimer.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wpmContext.WPMData.isTestOver]);
 
@@ -31,7 +32,6 @@ const WPMShower: React.FC = () => {
       secondsTimer.current = setInterval(addOneSecond, 1000);
       return () => clearInterval(secondsTimer.current);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wpmContext.WPMData.active]);
 
   useEffect(() => {
