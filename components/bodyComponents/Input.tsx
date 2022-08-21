@@ -118,7 +118,6 @@ const Input: React.FC = () => {
         }}
         onKeyDown={e => {
           if (currentIndex === 32) {
-            console.log(wpmContext.WPMData);
             if (value + e.key === arrayContext[32]) {
               setValue('');
               const lastSpan = spansArray.current[32] as HTMLElement;
